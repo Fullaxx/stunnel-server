@@ -27,7 +27,7 @@ You can provide a single key+certificate pem file:
 ```
 -v /srv/docker/mydomain/mycerts:/crypto -e CERTKEYFILE=certkey.pem
 ```
-You can provide a certificate file with a seperate key file:
+You can provide a certificate file along with a seperate key file:
 ```
 -v /srv/docker/mydomain/mycerts:/crypto -e CERTFILE=cert.pem -e KEYFILE=key.pem
 ```
