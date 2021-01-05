@@ -15,8 +15,8 @@ cd /cert
 openssl req -newkey rsa:2048 -nodes -keyout stunnel.key -x509 -days 365 -out stunnel.crt
 # This will create a single file with the key and certificate
 openssl req -newkey rsa:2048 -nodes -keyout stunnel.pem -x509 -days 365 -out stunnel.pem
-# You can use -subj to make this a non-interactive process
--subj "/C=US/ST=New York/L=Brooklyn/O=Example Brooklyn Company/CN=examplebrooklyn.com"
+# You can add -subj to make this a non-interactive process
+# -subj "/C=US/ST=New York/L=Brooklyn/O=Example Brooklyn Company/CN=examplebrooklyn.com"
 logout
 ```
-Now you can use stunnel.pem (located in /tmp/cert) inside your stunnel container
+Now you can use these files (located in /tmp/cert) inside your stunnel container

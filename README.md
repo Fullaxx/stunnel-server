@@ -66,7 +66,7 @@ fullaxx/stunnel-server
 ```
 
 ## Create a self-signed certificate
-For a quick example on SSL certificate creation, [go here](https://github.com/Fullaxx/stunnel-server/blob/main/CERTIFICATE_CREATION.md)
+For a quick example on SSL certificate creation, [go here](https://github.com/Fullaxx/stunnel-server/blob/master/CERTIFICATE_CREATION.md)
 
 ## Build it locally using the github repository
 ```
