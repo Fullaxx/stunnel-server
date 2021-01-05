@@ -41,4 +41,11 @@ else
   bail "Unknown Configuration!"
 fi
 
+if [ "${RUNSTUNNELASROOT}" == "1" ]; then
+  sed -e 's/setuid = stunnel4/;setuid = stunnel4/' -i ${CONFIG}
+  sed -e 's/setgid = stunnel4/;setgid = stunnel4/' -i ${CONFIG}
+else
+  chown -R stunnel4.stunnel4 /var/log/stunnel4
+fi
+
 exec stunnel4 ${CONFIG}

@@ -36,6 +36,12 @@ You can provide a certificate file along with a seperate key file:
 -v /srv/docker/mydomain/mycerts:/crypto -e CERTFILE=cert.pem -e KEYFILE=key.pem
 ```
 
+## Logging Options
+If you would like to see the stunnel logs on your host machine
+```
+-v /srv/docker/stunnel4/logs:/var/log/stunnel4
+```
+
 ## Run the image
 Run the image listening on 76.51.51.84:443 and connecting to 172.17.0.1:80 using a single PEM file
 ```
