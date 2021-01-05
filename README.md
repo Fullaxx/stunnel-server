@@ -54,7 +54,7 @@ fullaxx/stunnel-server
 Run the image with host networking
 ```
 docker run -d \
---network=host -e ACCEPT=172.17.0.1:443 -e CONNECT=172.17.0.1:80 \
+--network=host -e ACCEPT=76.51.51.84:443 -e CONNECT=172.17.0.1:80 \
 -v /crypto:/crypto -e CERTKEYFILE=certkey.pem \
 fullaxx/stunnel-server
 ```
@@ -63,3 +63,10 @@ fullaxx/stunnel-server
 ```
 docker build -t="fullaxx/stunnel-server" github.com/Fullaxx/stunnel-server
 ```
+
+## Posting Issues on Github
+When posting issues, please provide the following:
+* docker run line used to create the container
+* output from docker logs
+* screenshot showing the issue if not described in logs
+* any other relevant networking information
