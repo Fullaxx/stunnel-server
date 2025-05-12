@@ -1,14 +1,16 @@
-# A small docker image running stunnel
+# stunnel-server
+A small docker image running stunnel-server
 
 ## Base Docker Image
 [Debian](https://hub.docker.com/_/debian) Bullseye (x64)
 
 ## Software
-[stunnel](https://www.stunnel.org/) - A GPL licensed FTP server
+[stunnel](https://www.stunnel.org/) - A GPL licensed SSL proxy
 
-## Get the image from Docker Hub
+## Get the image from DockerHub or Build it locally
 ```
 docker pull fullaxx/stunnel-server
+docker build -t="fullaxx/stunnel-server" github.com/Fullaxx/stunnel-server
 ```
 
 ## Networking Options
@@ -61,17 +63,12 @@ Run the image with host networking
 ```
 docker run -d \
 --network=host -e ACCEPT=76.51.51.84:443 -e CONNECT=172.17.0.1:80 \
--v /crypto:/crypto -e CERTKEYFILE=certkey.pem \
+-v /srv/docker/mydomain/mycerts:/crypto -e CERTKEYFILE=certkey.pem \
 fullaxx/stunnel-server
 ```
 
 ## Create a self-signed certificate
-For a quick example on SSL certificate creation, [go here](https://github.com/Fullaxx/stunnel-server/blob/master/CERTIFICATE_CREATION.md)
-
-## Build it locally using the github repository
-```
-docker build -t="fullaxx/stunnel-server" github.com/Fullaxx/stunnel-server
-```
+For a quick example on SSL certificate creation, [go here](CERTIFICATE_CREATION.md)
 
 ## Posting Issues on Github
 When posting issues, please provide the following:
