@@ -1,8 +1,7 @@
-# A small docker image running stunnel server
+# A small docker image running stunnel
 
 ## Base Docker Image
-[Alpine](https://hub.docker.com/_/alpine) (x64)
-[Debian](https://hub.docker.com/_/debian) Bookworm/Bullseye (x64)
+[Debian](https://hub.docker.com/_/debian) Bullseye (x64)
 
 ## Software
 [stunnel](https://www.stunnel.org/) - A GPL licensed FTP server
